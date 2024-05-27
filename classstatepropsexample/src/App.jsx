@@ -4,13 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LifecycleClass from './components/LifecycleClass'
 import Myfunction from './components/Myfunction'
+import Reactlifecycle from './components/Reactlifecycle'
 
 function App() {
   return (
     <>
       My First React + Vite Project
-      <LifecycleClass name="Xyzname" />
-      <Myfunction name="abc"/>
+      {/* <LifecycleClass name="Xyzname" />*/}
+      <Myfunction name="abc"/> 
+      <Reactlifecycle />
     </>
   )
 }
