@@ -8,6 +8,7 @@ import Reactlifecycle from './components/Reactlifecycle'
 import Component1 from './components/Component1'
 import UseRefDemo from './components/UseRefDemo'
 import UseMemoExample from './components/UseMemoExample'
+import ApiComponent from './components/ApiComponent'
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <Reactlifecycle /> */}
       {/* <Component1 name="Abc"/> */}
       {/* <UseRefDemo /> */}
-      <UseMemoExample />
+      {/* <UseMemoExample /> */}
+      <ApiComponent />
     </>
   )
 }
