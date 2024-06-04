@@ -9,6 +9,7 @@ import Component1 from './components/Component1'
 import UseRefDemo from './components/UseRefDemo'
 import UseMemoExample from './components/UseMemoExample'
 import ApiComponent from './components/ApiComponent'
+import CRUDExample from './components/CRUDExample'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <Component1 name="Abc"/> */}
       {/* <UseRefDemo /> */}
       {/* <UseMemoExample /> */}
-      <ApiComponent />
+      {/* <ApiComponent /> */}
+      <CRUDExample />
     </>
   )
 }
