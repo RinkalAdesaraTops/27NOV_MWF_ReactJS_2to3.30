@@ -10,7 +10,7 @@ import UseRefDemo from './components/UseRefDemo'
 import UseMemoExample from './components/UseMemoExample'
 import ApiComponent from './components/ApiComponent'
 import CRUDExample from './components/CRUDExample'
-
+import CrudUser from './components/CrudUser'
 function App() {
   return (
     <>
@@ -22,7 +22,8 @@ function App() {
       {/* <UseRefDemo /> */}
       {/* <UseMemoExample /> */}
       {/* <ApiComponent /> */}
-      <CRUDExample />
+      {/* <CRUDExample /> */}
+      <CrudUser />
     </>
   )
 }
