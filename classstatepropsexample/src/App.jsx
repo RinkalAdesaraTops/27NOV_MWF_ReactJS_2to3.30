@@ -11,6 +11,7 @@ import UseMemoExample from './components/UseMemoExample'
 import ApiComponent from './components/ApiComponent'
 import CRUDExample from './components/CRUDExample'
 import CrudUser from './components/CrudUser'
+import ApiFilter from './components/ApiFilter'
 function App() {
   return (
     <>
@@ -23,7 +24,8 @@ function App() {
       {/* <UseMemoExample /> */}
       {/* <ApiComponent /> */}
       {/* <CRUDExample /> */}
-      <CrudUser />
+      {/* <CrudUser /> */}
+      <ApiFilter />
     </>
   )
 }
