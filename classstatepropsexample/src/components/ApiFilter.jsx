@@ -3,13 +3,13 @@ import axios from 'axios'
 const ApiFilter = () => {
     const [data,setData] = useState([])
     const [catdata,setCatData] = useState([])
+    // const [search,setSearch] = useState("")
     const fetchData = ()=>{
         axios.get('https://fakestoreapi.com/products')
         .then((res)=>setData(res.data))
     }
     useEffect(()=>{
         fetchData()
-
         axios.get('https://fakestoreapi.com/products/categories')
         .then((res)=>setCatData(res.data))
     },[])
@@ -40,10 +40,26 @@ const ApiFilter = () => {
         }
         setData(data1)
     }
+    const getProductName = (e)=>{
+        let search = e.target.value
+        let addData = data
+        if(search !== ''){
+            let data1 = addData.filter((i)=>{
+                if(i.title.includes(search) ){
+                        return i
+                    }
+            })
+            setData(data1)
+        } else {
+            fetchData()
+        }
+        
+    }
   return (
     <div>
         <h3>Product Information</h3>
-        <select name='catname' onChange={getCategory}>
+        <input type="search" name="searchname" id="searchname" onKeyUp={getProductName} />
+        &nbsp; <select name='catname' onChange={getCategory}>
             <option value=''>--Select Category--</option>
             {
                 catdata && catdata.map((i)=>{
@@ -56,7 +72,8 @@ const ApiFilter = () => {
             <option value=''>--Select--</option>
             <option value="1">Low to High</option>
             <option value="2">High to Low</option>
-        </select>
+        </select> 
+        <br /> <br />
         <table border={'2'}>
             <tr>
                 <td>Id</td>
