@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Test",
+      "age": 25,
+      "salary": 25000
+    },
+    {
+      "id": 2,
+      "name": "fgdgdfg",
+      "age": "25",
+      "salary": "25500"
+    },
+    {
+      "name": "abc",
+      "age": "28",
+      "salary": "28777",
+      "id": 3
+    }
+  ],
+  "product":[
+    {
+        "id":101,
+        "pname":"Tshirt"
+
+    }
+  ]
+}

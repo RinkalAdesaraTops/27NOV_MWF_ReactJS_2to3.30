@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const CRUDExample = () => {
     const [name,setName] = useState("")
@@ -7,6 +7,11 @@ const CRUDExample = () => {
     const [course,setCourse] = useState("")
 
     const [data,setData] = useState([])
+    useEffect(()=>{
+        let data1 = JSON.parse(localStorage.getItem('studentInfo'));
+        console.log(data1);
+        setData(data1)
+    },[])
     const saveData = (e)=>{
         e.preventDefault();
         setData([
@@ -17,6 +22,13 @@ const CRUDExample = () => {
                 course:course
             }
         ])
+        data.push({
+            name:name,
+            age:age,
+            course:course
+        })
+        console.log(data);
+        localStorage.setItem("studentInfo",JSON.stringify(data))
         setName('')
         setAge('')
         setCourse('')
@@ -29,17 +41,20 @@ const CRUDExample = () => {
         let data1 = data.filter((i,index)=>{
                     return id!=index
         })
+        
         setData(data1)
+        localStorage.setItem('studentInfo',JSON.stringify(data1))
     }
     const editData = (id)=>{
         setId(id)
-       let data1 = data.filter((i,index)=>{
+       let data1 = data.find((i,index)=>{
                     return id==index
         })
-        setName(data1[0].name)
-        setAge(data1[0].age)
-        setCourse(data1[0].course)
         console.log(data1)
+        setName(data1.name)
+        setAge(data1.age)
+        setCourse(data1.course)
+       
     }
     const updateData = (e)=>{
         e.preventDefault();
@@ -52,6 +67,8 @@ const CRUDExample = () => {
                 return i;
         })
         setData(data1)
+        localStorage.setItem('studentInfo',JSON.stringify(data1))
+
         setName('')
         setAge('')
         setCourse('')

@@ -12,6 +12,7 @@ import ApiComponent from './components/ApiComponent'
 import CRUDExample from './components/CRUDExample'
 import CrudUser from './components/CrudUser'
 import ApiFilter from './components/ApiFilter'
+import JSONserverAPI from './components/JSONserverAPI'
 function App() {
   return (
     <>
@@ -25,7 +26,8 @@ function App() {
       {/* <ApiComponent /> */}
       {/* <CRUDExample /> */}
       {/* <CrudUser /> */}
-      <ApiFilter />
+      {/* <ApiFilter /> */}
+      <JSONserverAPI />
     </>
   )
 }
