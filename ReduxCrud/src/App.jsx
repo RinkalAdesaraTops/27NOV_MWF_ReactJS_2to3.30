@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import UserCrudComponent from './UserCrudComponent'
+import Countercomponent from './Countercomponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <h3>Redux CRUD Example</h3>
-      <UserCrudComponent />
+      {/* <UserCrudComponent /> */}
+      <Countercomponent />
     </>
   )
 }
